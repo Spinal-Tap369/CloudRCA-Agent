@@ -54,6 +54,10 @@ def main() -> None:
     table.add_row("Safe no auto-remediation", str(eval_result.safe_no_auto_remediation))
     table.add_row("Predicted entities", ", ".join(eval_result.predicted_entities) or "-")
     table.add_row("Predicted kinds", ", ".join(eval_result.predicted_kinds) or "-")
+    table.add_row("GT entities", ", ".join(eval_result.ground_truth_entities) or "-")
+    table.add_row("GT kinds", ", ".join(eval_result.ground_truth_kinds) or "-")
+    table.add_row("GT filters", ", ".join(eval_result.ground_truth_filters) or "-")
+    table.add_row("GT actions", ", ".join(eval_result.ground_truth_recommended_actions) or "-")
     table.add_row("Ground truth file", eval_result.ground_truth_file or "-")
 
     console.print(table)
