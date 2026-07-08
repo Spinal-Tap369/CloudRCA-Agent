@@ -6,3 +6,5 @@ openai
 huggingface_hub
 rich
 google-genai
+langgraph
+langchain-google-genai
