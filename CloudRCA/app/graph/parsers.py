@@ -22,6 +22,7 @@ K8S_KINDS = {
     "networkpolicy": "NetworkPolicy",
     "resourcequota": "ResourceQuota",
     "limitrange": "LimitRange",
+    "horizontalpodautoscaler": "HorizontalPodAutoscaler",
 }
 
 CHAOS_KINDS = {
@@ -32,6 +33,8 @@ CHAOS_KINDS = {
     "httpchaos": "HTTPChaos",
     "iochaos": "IOChaos",
     "timechaos": "TimeChaos",
+    "jvmchaos": "JVMChaos",
+    "schedule": "Schedule",
 }
 
 ALL_KINDS = {**K8S_KINDS, **CHAOS_KINDS}
@@ -46,6 +49,7 @@ CONTROL_KINDS = {
     "ResourceQuota",
     "LimitRange",
     "Namespace",
+    "HorizontalPodAutoscaler",
     "NetworkChaos",
     "PodChaos",
     "StressChaos",
@@ -53,6 +57,8 @@ CONTROL_KINDS = {
     "HTTPChaos",
     "IOChaos",
     "TimeChaos",
+    "JVMChaos",
+    "Schedule",
 }
 
 OBSERVABILITY_TERMS = {
