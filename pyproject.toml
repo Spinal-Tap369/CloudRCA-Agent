@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudrca"
+version = "0.1.0"
+description = "Root cause analysis for ITBench SRE scenarios."
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "python-dotenv",
+    "openai",
+    "huggingface_hub",
+    "rich",
+    "google-genai",
+    "langgraph",
+    "langchain-google-genai",
+]
+
+[tool.setuptools]
+package-dir = {"" = "CloudRCA"}
+
+[tool.setuptools.packages.find]
+where = ["CloudRCA"]
+include = ["app*"]

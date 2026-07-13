@@ -775,7 +775,7 @@ Graph candidate evidence:
 """.strip()
 
 
-def diagnose_scenario(scenario_dir: str | Path) -> DiagnosisResult:
+def diagnose_scenario_legacy(scenario_dir: str | Path) -> DiagnosisResult:
     bundle, compact_pack = _build_evidence_bundle(scenario_dir)
     prompt = build_diagnosis_prompt(bundle)
 
@@ -823,3 +823,9 @@ def diagnose_scenario(scenario_dir: str | Path) -> DiagnosisResult:
         )
 
     return result
+
+
+def diagnose_scenario(scenario_dir: str | Path) -> DiagnosisResult:
+    from app.rca_agent.workflow import diagnose_scenario_with_workflow
+
+    return diagnose_scenario_with_workflow(scenario_dir)
